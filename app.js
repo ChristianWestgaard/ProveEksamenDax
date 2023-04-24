@@ -1,18 +1,26 @@
+
 var numb = 0
+let peopleArray = []
 
 function saveData(){
   var input = document.getElementById("saveNavn").value;
-  localStorage.setItem("DittNavn" + numb, input);
+  // localStorage.setItem("DittNavn" + numb, input);
+  peopleArray.push(input)
+  localStorage.setItem("names",JSON.stringify(peopleArray))
 
-  if (input = localStorage.getItem("DittNavn"+ numb)){
-      textVelkommen.innerHTML = "Velkommen,vi ønsker deg alt som er godt, " + input + "!"
-      console.log("Text, finished");
-  numb = numb + 1
-  console.log(numb);
-  }
+  // if (input = localStorage.getItem("DittNavn"+ numb)){
+  //     textVelkommen.innerHTML = "Velkommen,vi ønsker deg alt som er godt, " + input + "!"
+  //     console.log("Text, finished");
+  // console.log(numb);
+  // }
 }
+// var peps = localStorage.getItem("names")
 
+list1 = peopleArray
 
+function visitors(){
+  visitorList.innerHTML = list1
+}
 
 // function getTime(){
 //   var now    = new Date();

@@ -1,13 +1,18 @@
-function saveData(){
-    var input = document.getElementById("saveNavn").value;
-    localStorage.setItem("DittNavn", input);
+var numb = 0
 
-    if (input = localStorage.getItem("DittNavn")){
-        textVelkommen.innerHTML = "Velkommen,vi ønsker deg alt som er godt, " + input + "!"
-        console.log("Text, finished");
-    }
-    run()
+function saveData(){
+  var input = document.getElementById("saveNavn").value;
+  localStorage.setItem("DittNavn" + numb, input);
+
+  if (input = localStorage.getItem("DittNavn"+ numb)){
+      textVelkommen.innerHTML = "Velkommen,vi ønsker deg alt som er godt, " + input + "!"
+      console.log("Text, finished");
+  numb = numb + 1
+  console.log(numb);
+  }
 }
+
+
 
 // function getTime(){
 //   var now    = new Date();

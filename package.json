@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "node": "^19.8.1"
+    "node": "^19.8.1",
+    "realm": "^11.8.0"
   }
 }

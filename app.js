@@ -1,12 +1,16 @@
 
 var numb = 0
 let peopleArray = []
+var sepreator = "<br>"
 
 function saveData(){
   var input = document.getElementById("saveNavn").value;
   // localStorage.setItem("DittNavn" + numb, input);
   peopleArray.push(input)
   localStorage.setItem("names",JSON.stringify(peopleArray))
+
+  var finishedList = peopleArray.join(sepreator)
+  visitorList.innerHTML = finishedList
 
   // if (input = localStorage.getItem("DittNavn"+ numb)){
   //     textVelkommen.innerHTML = "Velkommen,vi ønsker deg alt som er godt, " + input + "!"
@@ -15,12 +19,6 @@ function saveData(){
   // }
 }
 // var peps = localStorage.getItem("names")
-
-list1 = peopleArray
-
-function visitors(){
-  visitorList.innerHTML = list1
-}
 
 // function getTime(){
 //   var now    = new Date();
